@@ -12,29 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&f[]=zodiak@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./build.css">
 </head>
 <body>
-    <div class="hero">
-        <div class="hero-text">
-            <h1>snu.suite</h1>
-            <p>coming soon...</p>
+    <div class="app h-screen flex flex-col md:flex-row justify-center items-center">
+        <div class="main-text top-10">
+            <h1 class="text-6xl md:text-9xl my-6 mx-6">snu.suite</h1>
+            <p class="text-xl md:text-4xl my-6 mx-6">coming soon...</p>
         </div>
-        <div class="blob-cont">
-            <div class="yellow blob"></div>
-            <div class="red blob"></div>
-            <div class="green blob"></div>
+
+        <div class="blob-cont absolute md:relative right-16">
+            <div class="blob yellow"></div>
+            <div class="blob red"></div>
+            <!-- <div class="blob blue"></div> -->
+            <div class="blob green"></div>
         </div>
     </div>
-    <svg>
-        <filter id='noiseFilter'>
-            <feTurbulence 
-            type='fractalNoise' 
-            baseFrequency='0.6' 
-            stitchTiles='stitch'/>
-            <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-            <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
-            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
-        </filter>
-    </svg>
 </body>
 </html>
